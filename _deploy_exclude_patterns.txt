@@ -1,0 +1,11 @@
+.vscode
+.git
+.gitignore
+\node_modules\
+\web\src\
+\web\package.json
+\web\tsconfig.json
+\web\webpack.common.js
+\web\webpack.dev.js
+\web\webpack.prod.js
+\yarn.lock

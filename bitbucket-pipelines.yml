@@ -1,0 +1,24 @@
+image: node:10.15.3
+
+pipelines:
+  default:
+    - step:
+        name: Build web
+        caches:
+          - node
+        script:
+          - cd app          
+          - npm run install:web
+          - npm run build:web
+          - cd web
+          - npm run test          
+    - step:
+        name: Build api
+        caches:
+          - node
+        script:
+          - cd app 
+          - npm run install:api
+          - cd api
+          - npm run test
+          
